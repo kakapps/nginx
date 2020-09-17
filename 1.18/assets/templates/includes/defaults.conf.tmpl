@@ -44,7 +44,7 @@ location ~* ^.+\.(?:m4a|mp4|mov)$ {
     mp4_max_buffer_size {{ getenv "NGINX_STATIC_MP4_MAX_BUFFER_SIZE" "5M" }};
 }
 
-location ~ ^/\.healthz$ {
+location ~ ^/healthz$ {
     access_log off;
     return 204;
 }
